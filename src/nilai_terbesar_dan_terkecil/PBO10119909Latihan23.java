@@ -19,19 +19,20 @@ public class PBO10119909Latihan23 {
         int nilai_mhs[] = new int[jum_nilai];
         for (i = 0; i < jum_nilai; i++) {
             System.out.printf("Masukkan Nilai Mahasiswa Ke-%d: ", i+1);
-            if (nilai_mhs[i] < terkecil) {
-                terkecil = nilai_mhs[i];
-            }
             nilai_mhs[i]= scanner.nextInt();
-            if (nilai_mhs[i] > terbesar) {
-                terbesar = nilai_mhs[i];
-            }
         }
 
         System.out.println();
         System.out.println("======Hasil Nilai Mahasiswa======");
+        terkecil = nilai_mhs[0];
         for (i = 0; i < jum_nilai; i++) {
             System.out.printf("Nilai Mahasiswa Ke-%1$d = %2$d%n", i+1, nilai_mhs[i]);
+            if (nilai_mhs[i] < terkecil) {
+                terkecil = nilai_mhs[i];
+            }
+            if (nilai_mhs[i] > terbesar) {
+                terbesar = nilai_mhs[i];
+            }
         }
         System.out.println();
         System.out.println("Nilai Terbesar Adalah "+terbesar);
